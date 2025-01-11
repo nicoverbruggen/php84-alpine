@@ -2,7 +2,7 @@ FROM php:8.4-alpine as builder
 
 # Install build dependencies
 RUN apk add --no-cache $PHPIZE_DEPS \
-    imagemagick-dev icu-dev zlib-dev jpeg-dev libpng-dev libzip-dev postgresql-dev libgomp 
+    imagemagick-dev icu-dev zlib-dev jpeg-dev libpng-dev libzip-dev postgresql-dev libgomp linux-headers
 
 # Configure and install PHP extensions
 RUN docker-php-ext-configure gd --with-jpeg
