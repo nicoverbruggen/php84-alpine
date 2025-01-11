@@ -7,7 +7,10 @@ This is a custom build based on PHP 8.4's Alpine docker image, with changes to m
 This image includes:
 
 - PHP 8.4 with `bcmath`, `exif`, `gd`, `intl`, `mysqli`, `opcache`, `pcntl`, `pdo_mysql`, `pdo_pgsql`, `pgsql`, `sodium`, `xdebug`, `zip` and `imagick` installed
-- `npm` and `composer` installed
+- Packages: `curl`, `git`, `sqlite`, `nano`, `ncdu`, `nodejs`, `npm`
+- Composer also comes pre-installed
+
+For the latest list of inclusion, see the [Dockerfile](./Dockerfile).
 
 ## Quick start
 
