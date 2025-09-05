@@ -39,7 +39,7 @@ COPY --from=builder /usr/local/etc/php/conf.d /usr/local/etc/php/conf.d
 
 # Install additional tools and required libraries
 RUN apk add --no-cache libpng libpq zip jpeg libzip imagemagick \
-    git curl sqlite nodejs npm nano ncdu
+    git curl sqlite nodejs npm nano ncdu openssh-client
 
 # Install Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
