@@ -7,12 +7,14 @@ This is a custom build based on PHP 8.4's Alpine docker image, with changes to m
 This image includes:
 
 - PHP 8.4 with `bcmath`, `exif`, `gd`, `intl`, `mysqli`, `opcache`, `pcntl`, `pdo_mysql`, `pdo_pgsql`, `pgsql`, `sodium`, `xdebug`, `zip` and `imagick` installed
-- Packages: `curl`, `git`, `sqlite`, `nano`, `ncdu`, `nodejs`, `npm`
+- Packages: `curl`, `git`, `sqlite`, `nano`, `ncdu`, `nodejs`, `npm`, `openssh-client`
 - Composer also comes pre-installed
 
 For the latest list of inclusion, see the [Dockerfile](./Dockerfile).
 
 ## Quick start
+
+### Docker
 
 In order to build and then test the container:
 
@@ -20,6 +22,11 @@ In order to build and then test the container:
     && docker run -it nicoverbruggen/php84-alpine sh
 
 You may omit the `--platform` flag if you wish to build a container for your own architecture, but there may be issues with dependencies.
+
+### Podman
+
+    podman build . -t nicoverbruggen/php84-alpine \
+    && podman run -it nicoverbruggen/php84-alpine sh
 
 ## Automatic builds
 
